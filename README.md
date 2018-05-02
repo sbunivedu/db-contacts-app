@@ -8,9 +8,11 @@ alt="image alt text"/>
 [embed Google drawings in markdown](https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference)
 
 ## Relational Schema
-* Persons(<u>id</u>, name)
-* Phones(<u>id</u>, person_id, number, label)
-* Emails(<u>id</u>, person_id, address, label)
+* Persons(__id__, name)
+* Phones(__id__, person_id, number, label)
+* Emails(__id__, person_id, address, label)
+
+Note: key attributes are in __bold face__.
 
 ## Create Tables
 ```
