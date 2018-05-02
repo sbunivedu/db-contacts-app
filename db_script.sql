@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS Persons;
+DROP TABLE IF EXISTS Emails;
+DROP TABLE IF EXISTS Phones;
+
+CREATE TABLE Persons (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE Phones (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  person_id INT,
+  number VARCHAR(255) NOT NULL,
+  label VARCHAR(255),
+  FOREIGN KEY (person_id) REFERENCES Persons(id)
+);
+
+CREATE TABLE Emails (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  person_id INT,
+  address VARCHAR(255) NOT NULL,
+  label VARCHAR(255),
+  FOREIGN KEY (person_id) REFERENCES Persons(id)
+);
