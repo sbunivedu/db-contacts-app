@@ -71,3 +71,36 @@ Try some queries on this "contacts" database to see if it works as expected.
 For example:
 * Find persons who has a home phone number.
 * Find persons who has more than two email addresses.
+
+## Access MySQL from Node
+### Install `mysql` Module
+Install the `mysq`l module for Node JS.
+```
+npm install mysql
+```
+### Connect to Database
+Connected to the "contacts" database as shown in [test1.js](./test1.js). Test
+the script with the following command:
+```
+node test1.js
+```
+You can copy and paste the result JSON into an [JSON formatter](https://jsoneditoronline.org/)
+to examine its content.
+
+### Create `db.js`
+For apps with complex need it is a good practice to handle database connections
+in a separate file as shown in [db.js](./db.js).
+
+Install `async` module as follows:
+```
+npm install async
+```
+Test `db.js` with [`test2.js`](./test2.js).
+
+```
+npm install express --save
+npm install body-parser --save
+```
+Soures:
+* https://www.terlici.com/2015/08/13/mysql-node-express.html
+* https://www.codementor.io/wapjude/creating-a-simple-rest-api-with-expressjs-in-5min-bbtmk51mq
