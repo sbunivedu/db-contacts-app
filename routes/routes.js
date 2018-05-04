@@ -6,11 +6,25 @@ var appRouter = function (app) {
   })
 
   app.get("/persons", function (req, res) {
-    person.getAll(function(err, rows){
+    person.getAll(function(err, results){
       if (err) throw err
-      res.status(200).send(rows)
+      res.status(200).send(results)
     })
   })
+
+  app.post('/person', function (req, res) {
+    let name = req.body.name
+
+    if (!name) {
+      return res.status(400).send(
+        {error:true, message: "Please provide the person's name"})
+    }
+
+    person.create(name, function (err, results) {
+      if (err) throw err
+      return res.send(
+        {error: false, data: results, message: 'New person has been created successfully.'})
+    })})
 }
 
 module.exports = appRouter

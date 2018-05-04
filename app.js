@@ -10,10 +10,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 routes(app)
 
-var server = app.listen(8080, function () {
-  console.log("app running on port.", server.address().port)
+// Connect to MySQL on start
+db.connect(db.MODE_PRODUCTION, function(err) {
+  if(err){
+    console.log('Unable to connect to MySQL.')
+  }else{
+    console.log('Connected to MySQL.')
+  }
 })
 
-db.connect(db.MODE_PRODUCTION, function() {
-  console.log('Connected to production database.')
+var server = app.listen(8080, function () {
+  console.log("app running on port.", server.address().port)
 })

@@ -1,0 +1,26 @@
+{
+  "name": "db-contacts-app",
+  "version": "1.0.0",
+  "description": "We need to keep track of a person's contacts - their names, phone numbers, and emails. Each phone number and email needs a label to show its type, which should be customizable.",
+  "main": "app.js",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbunivedu/db-contacts-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbunivedu/db-contacts-app/issues"
+  },
+  "homepage": "https://github.com/sbunivedu/db-contacts-app#readme"
+}

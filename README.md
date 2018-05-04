@@ -74,7 +74,7 @@ For example:
 
 ## Access MySQL from Node
 ### Install `mysql` Module
-Install the `mysq`l module for Node JS.
+Install the `mysql` module for Node JS.
 ```
 npm install mysql
 ```
@@ -97,10 +97,19 @@ npm install async
 ```
 Test `db.js` with [`test2.js`](./test2.js).
 
+### Build Models with SQL
+With `db.js` we can build any kind of data models without worrying about
+connecting the database. See files in `models` for details.
+
+### Build a REST API
+
 ```
 npm install express --save
 npm install body-parser --save
 ```
+You can use online API testing tools, such as https://www.hurl.it, to test the API.
+
 Soures:
 * https://www.terlici.com/2015/08/13/mysql-node-express.html
 * https://www.codementor.io/wapjude/creating-a-simple-rest-api-with-expressjs-in-5min-bbtmk51mq
+* https://codeburst.io/build-a-rest-api-for-node-mysql-2018-jwt-6957bcfc7ac9
