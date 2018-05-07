@@ -113,6 +113,20 @@ You can use online API testing tools, such as https://www.hurl.it, to test the A
 `node app.js` and go to `https://https://database-baochuan.c9users.io:8080/persons`
 to see all persons in our database.
 
+### Create a Web Client
+* Install "create-react-app" command by `npm install -g create-react-app`.
+* Create the react client by running `create-react-app client` in the root
+directory and modify `client/src/App.js` accordingly.
+* Modify `app.js` and `routes/routes.js` to serve the react app using the API
+  server.
+* Run the following commands to test:
+```
+cd client
+npm run build
+cd ..
+node app.js
+```
+
 Soures:
 * https://www.terlici.com/2015/08/13/mysql-node-express.html
 * https://www.codementor.io/wapjude/creating-a-simple-rest-api-with-expressjs-in-5min-bbtmk51mq

@@ -1,9 +1,11 @@
-var person = require("../models/person.js")
+const person = require("../models/person.js")
+const express = require('express')
+const path = require('path')
 
 var appRouter = function (app) {
-  app.get("/", function(req, res) {
-    res.status(200).send("Welcome to our restful API")
-  })
+  // app.get("/", function(req, res) {
+  //   res.status(200).send("Welcome to our restful API")
+  // })
 
   app.get("/persons", function (req, res) {
     person.getAll(function(err, results){
@@ -24,7 +26,14 @@ var appRouter = function (app) {
       if (err) throw err
       return res.send(
         {error: false, data: results, message: 'New person has been created successfully.'})
-    })})
+    })
+  })
+
+  app.get('*', (req,res) => {
+    let react_path = path.join(__dirname, '../client/build/index.html')
+    console.log("path to react: "+react_path)
+    res.sendFile(react_path)
+  })
 }
 
 module.exports = appRouter
