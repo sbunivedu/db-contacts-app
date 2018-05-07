@@ -20,3 +20,17 @@ exports.getAllById = function(id, done) {
     done(null, rows)
   })
 }
+
+exports.update = function(id, name, done) {
+  db.get().query('UPDATE Persons SET name = ? WHERE id = ?', [name, id], function (err, rows) {
+    if (err) return done(err)
+    done(null, rows)
+  })
+}
+
+exports.delete = function(id, done) {
+  db.get().query('DELETE FROM Persons WHERE id = ?', id, function (err, rows) {
+    if (err) return done(err)
+    done(null, rows)
+  })
+}

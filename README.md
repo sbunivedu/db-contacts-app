@@ -113,6 +113,16 @@ You can use online API testing tools, such as https://www.hurl.it, to test the A
 `node app.js` and go to `https://https://database-baochuan.c9users.io:8080/persons`
 to see all persons in our database.
 
+API design
+
+| Method | URL | Action |
+|:----------|:---------|:---------|
+|GET        |/persons  |Retrieve all persons|
+|GET        |/person/1 |Retrieve person with id == 1|
+|POST       |/person   |Add a new person|
+|PUT        |/person   |Update todo with id == 1|
+|DELETE     |/person   |Delete todo with id == 1|
+
 ### Create a Web Client
 * Install "create-react-app" command by `npm install -g create-react-app`.
 * Create the react client by running `create-react-app client` in the root
