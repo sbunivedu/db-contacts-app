@@ -61,7 +61,7 @@ mysqlimport -u user_name --ignore-lines=1 --fields-terminated-by=, --verbose --l
 ```
 Note:
 * You will need to replace "user_name" with your actual Cloud9 user name,
-which can be found under "accout settings".
+which can be found under "account settings".
 * You need to run the commands in the directory, under which the CSV files are
   stored.
 
@@ -109,7 +109,14 @@ npm install body-parser --save
 ```
 You can use online API testing tools, such as https://www.hurl.it, to test the API.
 
+'app.js' starts the API server and 'routes/routes.js' defines the routes. Run
+`node app.js` and go to `https://https://database-baochuan.c9users.io:8080/persons`
+to see all persons in our database.
+
 Soures:
 * https://www.terlici.com/2015/08/13/mysql-node-express.html
 * https://www.codementor.io/wapjude/creating-a-simple-rest-api-with-expressjs-in-5min-bbtmk51mq
 * https://codeburst.io/build-a-rest-api-for-node-mysql-2018-jwt-6957bcfc7ac9
+* https://www.andreasreiterer.at/web-development/connect-react-app-rest-api/
+* https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/
+

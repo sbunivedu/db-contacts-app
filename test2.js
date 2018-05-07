@@ -23,6 +23,7 @@ var data = {
 var db = require('./db')
 //db.connect(db.MODE_PRODUCTION, function() {
 db.connect(db.MODE_TEST, function() {
+  db.drop(['Persons', 'Phones', 'Emails'], function(){})
   db.fixtures(data, function(err) {
     if (err) return console.log(err)
     console.log('Data has been loaded...')
