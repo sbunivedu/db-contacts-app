@@ -120,8 +120,8 @@ API design
 |GET        |/persons  |Retrieve all persons|
 |GET        |/person/1 |Retrieve person with id == 1|
 |POST       |/person   |Add a new person|
-|PUT        |/person   |Update todo with id == 1|
-|DELETE     |/person   |Delete todo with id == 1|
+|PUT        |/person   |Update todo with|
+|DELETE     |/person   |Delete todo with|
 
 ### Create a Web Client
 * Install "create-react-app" command by `npm install -g create-react-app`.
